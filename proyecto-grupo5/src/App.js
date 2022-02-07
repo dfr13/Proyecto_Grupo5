@@ -9,6 +9,9 @@ function App() {
         <p>
           branch de Alder
         </p>
+        <p>
+          Alder Dario Velasquez Obando
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
