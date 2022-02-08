@@ -12,6 +12,9 @@ function App() {
         <p>
           Alder Dario Velasquez Obando
         </p>
+        <p>
+          Desde la Rama Daniel
+          </p>
         <a
           className="App-link"
           href="https://reactjs.org"
