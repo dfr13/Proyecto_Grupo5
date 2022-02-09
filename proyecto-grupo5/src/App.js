@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Login from './componets/Login';
 
 function App() {
   return (
@@ -13,8 +14,13 @@ function App() {
           Alder Dario Velasquez Obando
         </p>
         <p>
+<<<<<<< HEAD
           AHHHHHHHHHHHHHHHH
         </p>
+=======
+          Desde la Rama Daniel
+          </p>
+>>>>>>> main
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -23,6 +29,7 @@ function App() {
         >
           Learn React
         </a>
+        <Login/>
       </header>
     </div>
   );
