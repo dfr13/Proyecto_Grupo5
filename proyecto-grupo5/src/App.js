@@ -14,13 +14,8 @@ function App() {
           Alder Dario Velasquez Obando
         </p>
         <p>
-<<<<<<< HEAD
-          AHHHHHHHHHHHHHHHH
-        </p>
-=======
           Desde la Rama Daniel
           </p>
->>>>>>> main
         <a
           className="App-link"
           href="https://reactjs.org"
