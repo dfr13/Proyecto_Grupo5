@@ -1,23 +1,54 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
+import { MenuUsuarios } from '../data/MenuUsuarios';
 
 class Login extends React.Component{
     constructor(props) {
         super(props);
-        this.state = { user: '', password: ''};
+        this.state = { user: '', password: '', email:'', foto:''};
+        this.compruebaLogin = this.compruebaLogin.bind(this);
     }
-    compruebaLogin(){
-        this.setState({
-            user: this.valorUsuario.value,
-            password: this.valorPassword.value
-        })
-        localStorage.setItem('user', this.state.user);
-        localStorage.setItem('password', this.state.password);
+    compruebaLogin() {
+      var login = false;
+      MenuUsuarios.map((item) => {
+        if (
+          item.nombre === this.valorUsuario.value &&
+          item.password === this.valorPassword.value
+        ) {
+          this.setState({
+            user: item.nombre,
+            password: item.password,
+            email: item.email,
+            foto: item.foto,
+          });
+          localStorage.setItem('user', item.nombre);
+          localStorage.setItem('password', item.password);
+          localStorage.setItem('email', item.email);
+          localStorage.setItem('foto', item.foto);
+          login = true;
+        }
+      });
+      if (!login) {
+        alert(
+          'Ese usuario o contraseña incorrectos'
+        );
+      }
     }
 
     render() {
-        return(
-            <div className="main-site">
+      if (
+        this.state != null &&
+        this.state.user != null &&
+        this.state.user != ''
+      ) {
+        return (
+          <div className="main-site">
+            <h1>Bienvenido {this.state.user}!</h1>
+          </div>
+        );
+      } else {
+        return (
+          <div className="main-site">
             <h1>Bienvenido!</h1>
             <Container>
               <Form>
@@ -44,6 +75,7 @@ class Login extends React.Component{
                 <Button
                   variant="primary"
                   type="button"
+                  onClick={this.compruebaLogin}
                 >
                   Entrar
                 </Button>
@@ -51,6 +83,7 @@ class Login extends React.Component{
             </Container>
           </div>
         );
+      }
     }
 }
 export default Login;
