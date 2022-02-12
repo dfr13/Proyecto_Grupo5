@@ -4,6 +4,7 @@
 <p align="center">Ángel del Río</p>
 <p align="center">José Luis Sáinz Vierna</p>
 <p align="center">Alder Velásquez</p>
+
 ##  <p align="center">Dependecias React</p>
 
 @popperjs/core@2.11.2
