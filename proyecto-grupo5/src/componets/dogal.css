@@ -1,0 +1,42 @@
+.dropdowns{
+    width: auto;
+    margin: auto;
+    text-align: center;
+
+}
+.allPhotos{
+    margin-top: 2em;
+    padding-bottom: 2em;
+    width: auto;
+    height: auto;
+    border-top: 4px solid rgb(255, 255, 255);
+    border-left: 4px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 5px 4px rgb(166, 245, 245);
+}
+#nameDog{
+    text-align: center;
+    text-transform: uppercase;
+}
+.photoCas{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+#video {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    height: 200%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+#dropdown-basic-button{
+    background-color: #ffffff;
+    color: black;
+}
+#nameDog{
+    color: #ffffff;
+}
