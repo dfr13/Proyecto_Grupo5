@@ -1,5 +1,6 @@
 import DogGal from '../componets/DogGal';
 import Login from '../componets/Login';
+import Perfil from '../componets/Perfil';
 
 
 export const MenuItems = [
@@ -14,5 +15,11 @@ export const MenuItems = [
     path: '/doggalery',
     title: 'Galeria de Perros',
     component: DogGal,
+  },
+  {
+    id: 3,
+    path: '/perfil',
+    title: 'Perfil de usuario',
+    component: Perfil,
   },
 ];
