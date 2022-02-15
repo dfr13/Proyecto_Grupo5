@@ -1,0 +1,15 @@
+#iniciaSesion{
+    width: auto;
+    margin: auto;
+    text-align: center;
+    padding-top: 7rem;
+}
+
+#botonAlLogin{
+    color: white;
+    text-decoration: none;
+}
+
+.justify-content-md-center{
+    padding-top: 2rem;
+}
