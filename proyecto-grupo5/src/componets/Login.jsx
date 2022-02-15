@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { MenuUsuarios } from '../data/MenuUsuarios';
+import "./EstiloLogin.css";
 
 class Login extends React.Component{
     constructor(props) {
@@ -43,14 +44,15 @@ class Login extends React.Component{
       ) {
         return (
           <div className="main-site">
-            <h1>Bienvenido {this.state.user}!</h1>
+            <h1 id="bienvenido">Bienvenido {this.state.user}!</h1>
           </div>
         );
       } else {
         return (
           <div className="main-site">
-            <h1>Bienvenido!</h1>
-            <Container>
+            
+            <Container style={{paddingTop: '2rem'}}>
+              <h1>Bienvenido!</h1>
               <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Nombre usuario</Form.Label>
