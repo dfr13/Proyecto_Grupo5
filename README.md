@@ -23,6 +23,8 @@
 
 ## <p align="center">Comando npm install</p>
 
+ npm install react-scripts --save
+
  npm install @popperjs/core@2.11.2
  
  npm install bootstrap@5.1.3
@@ -36,6 +38,8 @@
  npm install react-router-dom@5.3.0
  
  npm install react-uuid@1.0.2
+
+ 
 
 
 
