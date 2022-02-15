@@ -2,6 +2,7 @@ import DogGal from '../componets/DogGal';
 import Login from '../componets/Login';
 
 
+
 export const MenuItems = [
   {
     id: 1,
@@ -15,4 +16,5 @@ export const MenuItems = [
     title: 'Galeria de Perros',
     component: DogGal,
   },
+  
 ];
