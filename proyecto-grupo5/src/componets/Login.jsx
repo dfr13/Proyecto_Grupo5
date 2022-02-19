@@ -1,58 +1,61 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { MenuUsuarios } from '../data/MenuUsuarios';
+import { Redirect } from 'react-router';
 import "./EstiloLogin.css";
+import ImgLogin from './IMG/login.svg'
 
-class Login extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = { user: '', password: '', email:'', foto:''};
-        this.compruebaLogin = this.compruebaLogin.bind(this);
-    }
-    compruebaLogin() {
-      var login = false;
-      MenuUsuarios.map((item) => {
-        if (
-          item.nombre === this.valorUsuario.value &&
-          item.password === this.valorPassword.value
-        ) {
-          this.setState({
-            user: item.nombre,
-            password: item.password,
-            email: item.email,
-            foto: item.foto,
-          });
-          localStorage.setItem('user', item.nombre);
-          localStorage.setItem('password', item.password);
-          localStorage.setItem('email', item.email);
-          localStorage.setItem('foto', item.foto);
-          login = true;
-        }
-      });
-      if (!login) {
-        alert(
-          'Ese usuario o contraseña incorrectos'
-        );
-      }
-    }
-
-    render() {
+class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { user: '', password: '', email: '', foto: '' };
+    this.compruebaLogin = this.compruebaLogin.bind(this);
+  }
+  compruebaLogin() {
+    var login = false;
+    MenuUsuarios.map((item) => {
       if (
-        this.state != null &&
-        this.state.user != null &&
-        this.state.user != ''
+        item.nombre === this.valorUsuario.value &&
+        item.password === this.valorPassword.value
       ) {
-        return (
-          <div className="main-site">
-            <h1 id="bienvenido">Bienvenido {this.state.user}!</h1>
-          </div>
-        );
-      } else {
-        return (
-          <div className="main-site">
-            
-            <Container style={{paddingTop: '2rem'}}>
-              <h1>Bienvenido!</h1>
+        this.setState({
+          user: item.nombre,
+          password: item.password,
+          email: item.email,
+          foto: item.foto,
+        });
+        localStorage.setItem('user', item.nombre);
+        localStorage.setItem('password', item.password);
+        localStorage.setItem('email', item.email);
+        localStorage.setItem('foto', item.foto);
+        login = true;
+        window.location.reload()
+      }
+    });
+    if (!login) {
+      alert(
+        'Ese usuario o contraseña incorrectos'
+      );
+    }
+  }
+
+  render() {
+    if (localStorage.getItem('user') !== null
+    ) {
+      return (
+        <div>
+          <h1>hola</h1>
+          <p>{localStorage.getItem('user')}</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className="main-site" id='LoginIni'>
+          <img src={ImgLogin} alt="fondo" id="FondoLogin" />
+          <Container style={{ paddingTop: '2rem' }} id='formulaLogin'>
+
+            <div className='CenterBoxs'>
+              <h1>Login</h1>
               <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Nombre usuario</Form.Label>
@@ -62,7 +65,7 @@ class Login extends React.Component{
                     ref={(usuario) => (this.valorUsuario = usuario)}
                   />
                 </Form.Group>
-  
+
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Contraseña</Form.Label>
                   <Form.Control
@@ -73,19 +76,20 @@ class Login extends React.Component{
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check type="checkbox" label="Recordarme" />
-                </Form.Group>
-                <Button
-                  variant="primary"
-                  type="button"
-                  onClick={this.compruebaLogin}
-                >
-                  Entrar
-                </Button>
+                </Form.Group >
+                <div className='botonCentrar'>
+                  <Button variant="primary" size="lg" onClick={this.compruebaLogin}>
+                    Entrar
+                  </Button>
+                </div>
+
               </Form>
-            </Container>
-          </div>
-        );
-      }
+            </div>
+
+          </Container>
+        </div>
+      );
     }
+  }
 }
 export default Login;

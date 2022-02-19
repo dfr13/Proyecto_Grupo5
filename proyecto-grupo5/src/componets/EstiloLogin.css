@@ -1,4 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 #bienvenido{
     text-align: center;
     padding-top: 2rem;
+}
+#FondoLogin{
+    position: absolute;
+
+    object-fit: cover;
+    transform: translate(60%, 5%);
+    z-index: -1;
+}
+#formulaLogin{
+    
+    border-radius: 20px;
+    background-color: #813afe;
+    float: left;
+    width: 25%;
+    height: 33em;
+    margin-top: 10em;
+    margin-left: 13em;
+    box-shadow: 16px 13px 2px 2px #f3ecff;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+}
+.btn-primary {
+    background-color: #3f3d56;
+    text-align: center;
+}
+.botonCentrar{
+    text-align: center;
+}
+.CenterBoxs{
+    padding-top: 3em;
+    margin: auto;
+    width: 19em;
+}
+.CenterBoxs h1{
+    color: white;
+    padding-bottom: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    
 }
