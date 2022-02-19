@@ -5,20 +5,40 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { MenuItems } from './data/MenuItems';
 
 export function App() {
-  return (
-    <Router>
-      <HeaderPagina />
-      {MenuItems.map((item) => {
-        return (
-          <Route
-            key={item.id}
-            path={item.path}
-            exact
-            component={item.component}
-          />
-        );
-      })}
+  if (localStorage.getItem('user') !== null){
+    return (
+      <Router>
+        <HeaderPagina />
+        {MenuItems.map((item) => {
+          return (
+            <Route
+              key={item.id}
+              path={item.path}
+              exact
+              component={item.component}
+            />
+          );
+        })}
+  
+      </Router>
+    );
 
-    </Router>
-  );
+  }else{
+    return (
+      <Router>
+        {MenuItems.map((item) => {
+          return (
+            <Route
+              key={item.id}
+              path={item.path}
+              exact
+              component={item.component}
+            />
+          );
+        })}
+  
+      </Router>
+    );
+  }
+  
 }
