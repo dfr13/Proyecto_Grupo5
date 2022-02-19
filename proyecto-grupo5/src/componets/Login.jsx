@@ -94,7 +94,46 @@ class Login extends React.Component {
         
         */}
 
-
+            <Card style={{ width: '18rem' }} className="Cartas">
+              <Card.Title>1</Card.Title>
+              <Card.Body>
+                <Card.Text>
+                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }} className="Cartas">
+              <Card.Title>1</Card.Title>
+              <Card.Body>
+                <Card.Text>
+                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }} className="Cartas">
+              <Card.Title>1</Card.Title>
+              <Card.Body>
+                <Card.Text>
+                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }} className="Cartas">
+              <Card.Title>1</Card.Title>
+              <Card.Body>
+                <Card.Text>
+                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }} className="Cartas">
+              <Card.Title>1</Card.Title>
+              <Card.Body>
+                <Card.Text>
+                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </div>
         </div>
       );
