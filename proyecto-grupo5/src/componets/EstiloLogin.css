@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@600&display=swap');
 #bienvenido{
     text-align: center;
     padding-top: 2rem;
@@ -41,4 +42,80 @@
     text-align: center;
     text-transform: uppercase;
     
+}
+.InicioMainSite{
+    background-color: #5A4480;
+    position: relative;
+    width: 1920px;
+    height: 908px;
+}
+.PrincipalContent{
+    position: absolute;
+    width: 1920px;
+    height: 400px;
+    left: 0px;
+    background: #B387FF;
+    z-index: 1;
+}
+.rectanguloCambio{
+    position: absolute;
+    width: 1920px;
+    height: 257px;
+    top: 400px;
+
+    background: #B387FF;
+    clip-path: polygon(100% 0, 100% 86%, 36% 86%, 0 57%, 0 0);
+    
+}
+#blockName{
+    position: absolute;
+width: 631px;
+height: 215px;
+left: 935px;
+top: 144px;
+
+font-family: 'Bitter', serif;
+font-style: normal;
+font-weight: normal;
+font-size: 96px;
+line-height: 141px;
+text-align: center;
+
+color: #000000;
+}
+.ContentRMenss{
+position: absolute;
+width: 958px;
+height: 285px;
+left: 726px;
+top: 254px;
+
+font-family: Rufina;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+.FotoPerfil{
+position: absolute;
+width: 265px;
+height: 331px;
+left: 288px;
+top: 80px;
+border-radius: 15em;
+border: 2px solid black;
+}
+.FloatLayout{
+    position: absolute;
+width: 1791px;
+height: 339px;
+left: 64px;
+top: 478px;
+
+background: #813AFE;
+border-radius: 74px;
+box-shadow: 5px 3px 17px 0px #3b393e;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { MenuUsuarios } from '../data/MenuUsuarios';
-import { Redirect } from 'react-router';
 import "./EstiloLogin.css";
 import ImgLogin from './IMG/login.svg'
 
@@ -43,9 +42,25 @@ class Login extends React.Component {
     if (localStorage.getItem('user') !== null
     ) {
       return (
-        <div>
-          <h1>hola</h1>
-          <p>{localStorage.getItem('user')}</p>
+        <div className='InicioMainSite'>
+          <div className='PrincipalContent'>
+            <div id="blockName">
+              <h1>Hi {localStorage.getItem('user')}</h1>
+            </div>
+            <div className='ContentRMenss'>
+              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+            </div>
+            <div className='FotoPerfil' style={{ backgroundImage: 'url('+localStorage.getItem('foto')+')'}}>
+
+            </div>
+
+          </div>
+          <div className='rectanguloCambio'>
+
+          </div>
+          <div className='FloatLayout'>
+
+          </div>
         </div>
       );
     } else {
