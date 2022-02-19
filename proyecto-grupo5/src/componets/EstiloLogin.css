@@ -118,4 +118,19 @@ top: 478px;
 background: #813AFE;
 border-radius: 74px;
 box-shadow: 5px 3px 17px 0px #3b393e;
+overflow: hidden;
+}
+.Cartas{
+    margin: auto;
+    float: left;
+    padding: auto;
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 2em;
+    width: 60%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0) !important;
+    border-color: rgba(0, 0, 0, 0) !important;
+    color: white;
+    padding-top: 3em;
 }
