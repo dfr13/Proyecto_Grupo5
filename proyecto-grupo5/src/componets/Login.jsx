@@ -18,12 +18,14 @@ class Login extends React.Component {
     this.compruebaLogin = this.compruebaLogin.bind(this);
   }
 
-  // async componentDidMount() {
+  async componentDidMount() {
+    fetch('api/v1/resources/dogs?number=5')
+      .then(response => response.json())
+      .then(data => this.setState({
+        tableData: data
+      }));
 
-  //   fetch('https://dog-api.kinduff.com/api/facts')
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))
-  //}
+  }
 
 
   compruebaLogin() {
@@ -73,68 +75,23 @@ class Login extends React.Component {
             </div>
 
           </div>
-          <div className='rectanguloCambio'>
-
-          </div>
           <div className='FloatLayout'>
-            {/* 
+            {this.state.tableData.map((item) => {
+              return (
+                <Card style={{ width: '18rem' }} className="Cartas">
+                  <Card.Title>Dog Facts</Card.Title>
+                  <Card.Body>
+                    <Card.Text>
+                      {item.fact}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              );
+            })}
 
-             {this.state.tableData.map((item) => {
-                return (
-                  <Card style={{ width: '18rem' }} className="Cartas">
-                    <Card.Title>1</Card.Title>
-                    <Card.Body>
-                      <Card.Text>
-                        {item}
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                );
-              })}
-        
-        */}
 
-            <Card style={{ width: '18rem' }} className="Cartas">
-              <Card.Title>1</Card.Title>
-              <Card.Body>
-                <Card.Text>
-                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }} className="Cartas">
-              <Card.Title>1</Card.Title>
-              <Card.Body>
-                <Card.Text>
-                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }} className="Cartas">
-              <Card.Title>1</Card.Title>
-              <Card.Body>
-                <Card.Text>
-                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }} className="Cartas">
-              <Card.Title>1</Card.Title>
-              <Card.Body>
-                <Card.Text>
-                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
-                </Card.Text>
-              </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }} className="Cartas">
-              <Card.Title>1</Card.Title>
-              <Card.Body>
-                <Card.Text>
-                  hollalalsdlalsdlasldlasdlasdlasdalsldalsdasd
-                </Card.Text>
-              </Card.Body>
-            </Card>
           </div>
+          <iframe id='StiloFrame' src='https://my.spline.design/bandingcopy-59b335ada7bf8f22a4c0dee2f03358db/' style={{ borderWidth: '0px' }}></iframe>
         </div>
       );
     } else {
