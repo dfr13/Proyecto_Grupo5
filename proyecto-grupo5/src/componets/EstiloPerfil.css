@@ -13,3 +13,10 @@
 .justify-content-md-center{
     padding-top: 2rem;
 }
+#carta {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+  }
