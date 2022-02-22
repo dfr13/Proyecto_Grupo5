@@ -1,5 +1,6 @@
 {
   "name": "proyecto-grupo5",
+  "proxy": "https://dog-facts-api.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +14,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "5.3",
     "react-scripts": "^5.0.0",
+    "react-uuid": "^1.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

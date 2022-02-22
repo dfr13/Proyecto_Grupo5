@@ -1,32 +1,44 @@
+import Alder from './Fotos/Alder.svg';
+import Daniel from './Fotos/Daniel.svg';
+import Alejandro from './Fotos/Tolosa.svg';
+import Angel from './Fotos/Angel.svg';
+import Jose from './Fotos/Jose.svg';
+
+
 export const MenuUsuarios = [
     {
-      nombre: 'daniel',
+      nombre: 'Daniel',
       password: '1234',
       email: 'daniel@email.com',
-      foto: 'https://admin.vasava.es/w2019/assets/images/portfolio/atm_1.jpg',
+      foto: Daniel,
+      info: 'Has maiorum habemus detraxit at. Timeam fabulas splendide et his. Facilisi aliquando sea ad, vel ne consetetur adversarium. Integre admodum et his, nominavi urbanitas et per, alii reprehendunt et qui. His ei meis legere nostro, eu kasd fabellas definiebas mei, in sea augue iriure.',
     },
     {
-      nombre: 'alejandro',
+      nombre: 'Alejandro',
       password: '1234',
       email: 'fran@email.com',
-      foto: 'https://phantom-marca.unidadeditorial.es/4f45ed57005bb8531d73488fed0c3e54/resize/1320/f/jpg/assets/multimedia/imagenes/2021/12/28/16406965716317.jpg',
+      foto: Alejandro,
+      info: 'At quaeque adversarium ius, sed at integre persius verterem. Sit summo tibique at, eam et fugit complectitur, vis te natum vivendum mandamus. Iudico quodsi cum ad, dicit everti sensibus in sea, ea eius paulo deterruisset pri. Pro id aliquam hendrerit definitiones. Per et legimus delectus.',
     },
     {
-      nombre: 'angel',
+      nombre: 'Angel',
       password: '1234',
       email: 'celia@email.com',
-      foto: 'https://valenciacf.azureedge.net/thumbs/2x/vLLXe4oi315XPTDor6oyZW6U27EhvBRByyaCfvvXb4h9Xj0rCBEPcVXht5A4Oanf.png',
+      foto: Angel,
+      info: 'In mel saperet expetendis. Vitae urbanitas sadipscing nec ut, at vim quis lorem labitur. Exerci electram has et, vidit solet tincidunt quo ad, moderatius contentiones nec no. Nam et puto abhorreant scripserit, et cum inimicus accusamus.',
     },
     {
-      nombre: 'jose luis',
+      nombre: 'Jose luis',
       password: '1234',
       email: 'pepe@email.com',
-      foto: 'https://www.realmadrid.com/StaticFiles/RealMadridResponsive/images/static/og-image.png',
+      foto: Jose,
+      info: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.',
     },
     {
-      nombre: 'alder',
+      nombre: 'Alder',
       password: '1234',
       email: 'lolo@email.com',
-      foto: 'http://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/3.png',
+      foto: Alder,
+      info: 'Id sea utamur aperiam, te per choro accusamus consulatu. Brute munere corrumpit ut pri. Ea ipsum appareat erroribus mea. Mei probo inani aliquid ad. Omnis fabulas concludaturque an vix, an noluisse takimata facilisis pro, sit te volumus mandamus. Ad malorum imperdiet duo, ea possim utamur accusamus vix.',
     },
   ];

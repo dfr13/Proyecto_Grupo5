@@ -1,4 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bitter:wght@600&display=swap');
 #bienvenido{
     text-align: center;
     padding-top: 2rem;
 }
+#FondoLogin{
+    position: absolute;
+
+    object-fit: cover;
+    transform: translate(60%, 5%);
+    z-index: -1;
+}
+#formulaLogin{
+    
+    border-radius: 20px;
+    background-color: #813afe;
+    float: left;
+    width: 25%;
+    height: 33em;
+    margin-top: 10em;
+    margin-left: 13em;
+    box-shadow: 16px 13px 2px 2px #f3ecff;
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+}
+.btn-primary {
+    background-color: #3f3d56;
+    text-align: center;
+}
+.botonCentrar{
+    text-align: center;
+}
+.CenterBoxs{
+    padding-top: 3em;
+    margin: auto;
+    width: 19em;
+}
+.CenterBoxs h1{
+    color: white;
+    padding-bottom: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.InicioMainSite{
+    background: #813AFE;
+    position: relative;
+    width: 1920px;
+    height: 908px;
+}
+.PrincipalContent{
+    position: absolute;
+    width: 1920px;
+    height: 478px;
+    left: 0px;
+    background: #B387FF;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+.rectanguloCambio{
+    position: absolute;
+    width: 1920px;
+    height: 257px;
+    top: 400px;
+
+    background: #B387FF;
+    
+    
+}
+#blockName{
+    position: absolute;
+width: 631px;
+height: 215px;
+left: 935px;
+top: 144px;
+
+font-family: 'Bitter', serif;
+font-style: normal;
+font-weight: normal;
+font-size: 96px;
+line-height: 141px;
+text-align: center;
+
+color: #000000;
+}
+.ContentRMenss{
+position: absolute;
+width: 958px;
+height: 285px;
+left: 726px;
+top: 254px;
+
+font-family: Rufina;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 25px;
+text-align: center;
+
+color: #000000;
+}
+.FotoPerfil{
+position: absolute;
+width: 265px;
+height: 331px;
+left: 288px;
+top: 80px;
+border-radius: 15em;
+border: 2px solid black;
+}
+.FloatLayout{
+    position: absolute;
+width: 1791px;
+height: 339px;
+left: 64px;
+top: 478px;
+
+background: #813AFE;
+border-radius: 74px;
+box-shadow: 5px 3px 17px 0px #3b393e;
+overflow: hidden;
+z-index: 2;
+}
+.Cartas{
+    margin: auto;
+    float: left;
+    padding: auto;
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 4em;
+    width: 60%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0) !important;
+    border-color: rgba(255, 255, 255, 0) !important;
+    color: white;
+    padding-top: 3em;
+    font-family: 'Akaya Telivigala', cursive;
+
+}
+#StiloFrame{
+    width:100%;
+    height: 100%;
+}
+

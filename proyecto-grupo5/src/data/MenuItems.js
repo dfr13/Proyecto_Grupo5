@@ -7,13 +7,13 @@ export const MenuItems = [
   {
     id: 1,
     path: '/',
-    title: 'Login',
+    title: 'Inicio',
     component: Login,
   },
   {
     id: 2,
     path: '/doggalery',
-    title: 'Galeria de Perros',
+    title: 'Galeria de Mascotas',
     component: DogGal,
   },
   {

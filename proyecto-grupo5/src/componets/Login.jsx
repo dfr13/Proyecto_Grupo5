@@ -1,58 +1,107 @@
 import React from 'react';
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Card } from 'react-bootstrap';
 import { MenuUsuarios } from '../data/MenuUsuarios';
 import "./EstiloLogin.css";
+import ImgLogin from './IMG/login.svg'
 
-class Login extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = { user: '', password: '', email:'', foto:''};
-        this.compruebaLogin = this.compruebaLogin.bind(this);
-    }
-    compruebaLogin() {
-      var login = false;
-      MenuUsuarios.map((item) => {
-        if (
-          item.nombre === this.valorUsuario.value &&
-          item.password === this.valorPassword.value
-        ) {
-          this.setState({
-            user: item.nombre,
-            password: item.password,
-            email: item.email,
-            foto: item.foto,
-          });
-          localStorage.setItem('user', item.nombre);
-          localStorage.setItem('password', item.password);
-          localStorage.setItem('email', item.email);
-          localStorage.setItem('foto', item.foto);
-          login = true;
-        }
-      });
-      if (!login) {
-        alert(
-          'Ese usuario o contraseña incorrectos'
-        );
-      }
-    }
+class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: '',
+      password: '',
+      email: '',
+      foto: '',
+      info: '',
+      tableData: []
+    };
+    this.compruebaLogin = this.compruebaLogin.bind(this);
+  }
 
-    render() {
+  async componentDidMount() {
+    fetch('api/v1/resources/dogs?number=5')
+      .then(response => response.json())
+      .then(data => this.setState({
+        tableData: data
+      }));
+
+  }
+
+
+  compruebaLogin() {
+    var login = false;
+    MenuUsuarios.map((item) => {
       if (
-        this.state != null &&
-        this.state.user != null &&
-        this.state.user != ''
+        item.nombre === this.valorUsuario.value &&
+        item.password === this.valorPassword.value
       ) {
-        return (
-          <div className="main-site">
-            <h1 id="bienvenido">Bienvenido {this.state.user}!</h1>
+        this.setState({
+          user: item.nombre,
+          password: item.password,
+          email: item.email,
+          foto: item.foto,
+          info: item.info,
+        });
+        localStorage.setItem('user', item.nombre);
+        localStorage.setItem('password', item.password);
+        localStorage.setItem('email', item.email);
+        localStorage.setItem('foto', item.foto);
+        localStorage.setItem('info', item.info);
+        login = true;
+        window.location.reload()
+      }
+    });
+    if (!login) {
+      alert(
+        'Ese usuario o contraseña incorrectos'
+      );
+    }
+  }
+
+  render() {
+    if (localStorage.getItem('user') !== null
+    ) {
+      return (
+        <div className='InicioMainSite'>
+          <div className='PrincipalContent'>
+            <div id="blockName">
+              <h1>Hi {localStorage.getItem('user')}!</h1>
+            </div>
+            <div className='ContentRMenss'>
+              <p>{localStorage.getItem('info')}</p>
+            </div>
+            <div className='FotoPerfil' style={{ backgroundImage: 'url(' + localStorage.getItem('foto') + ')' }}>
+
+            </div>
+
           </div>
-        );
-      } else {
-        return (
-          <div className="main-site">
-            
-            <Container style={{paddingTop: '2rem'}}>
-              <h1>Bienvenido!</h1>
+          <div className='FloatLayout'>
+            {this.state.tableData.map((item) => {
+              return (
+                <Card style={{ width: '18rem' }} className="Cartas">
+                  <Card.Title>Dog Facts</Card.Title>
+                  <Card.Body>
+                    <Card.Text>
+                      {item.fact}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              );
+            })}
+
+
+          </div>
+          <iframe id='StiloFrame' src='https://my.spline.design/bandingcopy-59b335ada7bf8f22a4c0dee2f03358db/' style={{ borderWidth: '0px' }}></iframe>
+        </div>
+      );
+    } else {
+      return (
+        <div className="main-site" id='LoginIni'>
+          <img src={ImgLogin} alt="fondo" id="FondoLogin" />
+          <Container style={{ paddingTop: '2rem' }} id='formulaLogin'>
+
+            <div className='CenterBoxs'>
+              <h1>Login</h1>
               <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Nombre usuario</Form.Label>
@@ -62,7 +111,7 @@ class Login extends React.Component{
                     ref={(usuario) => (this.valorUsuario = usuario)}
                   />
                 </Form.Group>
-  
+
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Contraseña</Form.Label>
                   <Form.Control
@@ -73,19 +122,20 @@ class Login extends React.Component{
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check type="checkbox" label="Recordarme" />
-                </Form.Group>
-                <Button
-                  variant="primary"
-                  type="button"
-                  onClick={this.compruebaLogin}
-                >
-                  Entrar
-                </Button>
+                </Form.Group >
+                <div className='botonCentrar'>
+                  <Button variant="primary" size="lg" onClick={this.compruebaLogin}>
+                    Entrar
+                  </Button>
+                </div>
+
               </Form>
-            </Container>
-          </div>
-        );
-      }
+            </div>
+
+          </Container>
+        </div>
+      );
     }
+  }
 }
 export default Login;
