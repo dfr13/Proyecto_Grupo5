@@ -1,22 +1,42 @@
-#iniciaSesion{
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bitter:wght@600&display=swap');
+#iniciaSesion {
     width: auto;
     margin: auto;
     text-align: center;
     padding-top: 7rem;
 }
 
-#botonAlLogin{
+#botonAlLogin {
     color: white;
     text-decoration: none;
 }
 
-.justify-content-md-center{
+.justify-content-md-center {
     padding-top: 2rem;
 }
+
 #carta {
     height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: yellow;
-  }
+}
+
+.CenterBoxs {
+    padding-top: 3em;
+    margin: auto;
+    width: 19em;
+}
+
+.PerfilData{
+    position: absolute;
+    width: 1920px;
+    height: 478px;
+    left: 0px;
+    background: #B387FF;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}

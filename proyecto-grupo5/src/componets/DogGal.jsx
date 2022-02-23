@@ -1,5 +1,5 @@
 import React from 'react';
-import { DropdownButton, Dropdown, Container, Carousel } from 'react-bootstrap';
+import { DropdownButton, Dropdown, Container, Carousel, Button } from 'react-bootstrap';
 import { NameDog } from '../data/NameDog';
 import './dogal.css';
 import videoFondo from './video/4K_35.mp4'
@@ -41,6 +41,10 @@ class DogGal extends React.Component {
 
     }
 
+    añadirFav() {
+        localStorage.setItem('nombreRaza', this.state.name);
+    }
+
 
 
     render() {
@@ -49,7 +53,7 @@ class DogGal extends React.Component {
 
                 <Container fluid>
                     <video autoPlay muted loop id="video">
-                        <source src={videoFondo} type="video/mp4"/>
+                        <source src={videoFondo} type="video/mp4" />
                     </video>
                     <div className='dropdowns'>
                         <h1>Fotos de Perritos</h1>
@@ -64,6 +68,10 @@ class DogGal extends React.Component {
                         </DropdownButton>
                     </div>
                     <div className='allPhotos'>
+                        <Button variant="primary" onClick={this.añadirFav}>
+                            <a id="botonAlLogin" href='/'>Añadir a Favorito</a>
+                        </Button>
+                        
                         <h1 id='nameDog'>{this.state.name}</h1>
 
 
@@ -99,7 +107,7 @@ class DogGal extends React.Component {
             return (
                 <Container fluid>
                     <video autoPlay muted loop id="video">
-                        <source src={videoFondo} type="video/mp4"/>
+                        <source src={videoFondo} type="video/mp4" />
                     </video>
                     <div className='dropdowns'>
                         <h1>Fotos de Perritos</h1>

@@ -28,39 +28,38 @@ class Perfil extends React.Component {
       info: localStorage.getItem('info'),
     });
   }
-  
+
   render() {
-    if (localStorage.getItem('user') !== null){
-        return (
-          <div>
-<Card style={{ width: '18rem' }}>     
-         <Card.Img variant="top" src={this.state.foto} />
-         <Card.Body>
-           <Card.Title>
-           <InputGroup.Text id="basic-addon3">Nombre: {this.state.user} </InputGroup.Text> 
-           </Card.Title>
-           <Card.Title>
-           <InputGroup.Text id="basic-addon3">e-mail: {this.state.email} </InputGroup.Text>
-           </Card.Title>
-           <Card.Title>
-           <InputGroup.Text id="basic-addon3">Informacion: {this.state.info} </InputGroup.Text>
-           </Card.Title>
-         </Card.Body>
-         <Button variant="primary" onClick={this.cerrarSesion}>SALIR</Button>
-       </Card>
-       </div>
-          );
-    }else {
-        return (
-            <div id="iniciaSesion">
-                <h1>Debes iniciar sesión primero.</h1>
-                <Button variant="primary" onClick={this.cerrarSesion}>
-                    <a id="botonAlLogin" href='/'>Ir al login</a>
-                </Button>
+    if (localStorage.getItem('user') !== null) {
+      return (
+        <div className='InicioMainSite'>
+          <div className='PerfilData'>
+            <div id="blockName">
+              <h1>Perfil de {localStorage.getItem('user')}!</h1>
             </div>
-        );
+            <div className='ContentRMenss'>
+              <p>{localStorage.getItem('info')}</p>
+              <Button variant="primary" onClick={this.cerrarSesion}>
+                <a id="botonAlLogin" href='/'>Cerrar Sesion</a>
+              </Button>
+            </div>
+            <div className='FotoPerfil' style={{ backgroundImage: 'url(' + localStorage.getItem('foto') + ')' }}>
+
+            </div>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div id="iniciaSesion">
+          <h1>Debes iniciar sesión primero.</h1>
+          <Button variant="primary" onClick={this.cerrarSesion}>
+            <a id="botonAlLogin" href='/'>Ir al login</a>
+          </Button>
+        </div>
+      );
     }
-    
+
   }
 }
 
