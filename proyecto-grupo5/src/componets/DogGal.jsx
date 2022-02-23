@@ -41,8 +41,8 @@ class DogGal extends React.Component {
 
     }
 
-    añadirFav() {
-        localStorage.setItem('nombreRaza', this.state.name);
+    añadirFav(item) {
+        localStorage.setItem('nombreRaza', item);
     }
 
 
@@ -68,8 +68,8 @@ class DogGal extends React.Component {
                         </DropdownButton>
                     </div>
                     <div className='allPhotos'>
-                        <Button variant="primary" onClick={this.añadirFav}>
-                            <a id="botonAlLogin" href='/'>Añadir a Favorito</a>
+                        <Button variant="primary" onClick={this.añadirFav(this.state.name)}>
+                            Añadir a Favorito
                         </Button>
                         
                         <h1 id='nameDog'>{this.state.name}</h1>

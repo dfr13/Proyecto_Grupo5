@@ -39,6 +39,7 @@ class Perfil extends React.Component {
             </div>
             <div className='ContentRMenss'>
               <p>{localStorage.getItem('info')}</p>
+              <p>{localStorage.getItem('nombreRaza')}fav</p>
               <Button variant="primary" onClick={this.cerrarSesion}>
                 <a id="botonAlLogin" href='/'>Cerrar Sesion</a>
               </Button>
