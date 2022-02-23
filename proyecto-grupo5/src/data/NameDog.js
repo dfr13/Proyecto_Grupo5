@@ -39,6 +39,10 @@
         Nombre: 'pinscher',
         Variante: 'miniature'
       },
+      {
+        Nombre: 'waterdog',
+        Variante: 'spanish'
+      },
   ];
 /*
   https://dog.ceo/api/breed/hound/afghan/images
