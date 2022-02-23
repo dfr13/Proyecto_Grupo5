@@ -66,11 +66,12 @@ class DogGal extends React.Component {
                                 );
                             })}
                         </DropdownButton>
-                    </div>
-                    <div className='allPhotos'>
-                        <Button variant="primary" onClick={this.añadirFav(this.state.name)}>
+                        <Button variant="primary" onClick={this.añadirFav(this.state.name)} className='center' id='buttonF'>
                             Añadir a Favorito
                         </Button>
+                    </div>
+                    <div className='allPhotos'>
+                        
                         
                         <h1 id='nameDog'>{this.state.name}</h1>
 

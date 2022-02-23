@@ -13,7 +13,7 @@ import './EstiloPerfil.css';
 class Perfil extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { user: '', password: '', foto: '', emial: '', info: '' };
+    this.state = { user: '', password: '', foto: '', email: '', info: '', raza: '' };
   }
 
   cerrarSesion() {
@@ -26,6 +26,7 @@ class Perfil extends React.Component {
       foto: localStorage.getItem('foto'),
       email: localStorage.getItem('email'),
       info: localStorage.getItem('info'),
+      raza: localStorage.getItem('nombreRaza'),
     });
   }
 
@@ -38,8 +39,9 @@ class Perfil extends React.Component {
               <h1>Perfil de {localStorage.getItem('user')}!</h1>
             </div>
             <div className='ContentRMenss'>
+              <p>Email: {localStorage.getItem('email')}</p>
+              <p>Raza favorita:  {this.state.raza}</p>
               <p>{localStorage.getItem('info')}</p>
-              <p>{localStorage.getItem('nombreRaza')}fav</p>
               <Button variant="primary" onClick={this.cerrarSesion}>
                 <a id="botonAlLogin" href='/'>Cerrar Sesion</a>
               </Button>
@@ -48,6 +50,7 @@ class Perfil extends React.Component {
 
             </div>
           </div>
+          <iframe id='StiloFrame' src='https://my.spline.design/bandingcopy-59b335ada7bf8f22a4c0dee2f03358db/' style={{ borderWidth: '0px' }}></iframe>
         </div>
       );
     } else {
