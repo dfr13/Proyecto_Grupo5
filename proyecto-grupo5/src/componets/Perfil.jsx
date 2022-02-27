@@ -13,65 +13,57 @@ import './EstiloPerfil.css';
 class Perfil extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { user: '', password: '', foto: '', email: '', info: '', raza: '' };
   }
 
   cerrarSesion() {
     localStorage.clear();
   }
-  
-  render() {
-    if (localStorage.getItem('user') !== null){
-        return (
-            <Container className="justify-content-md-center">
-              <br />
-              <Row className="justify-content-md-center">
-                <Col lg={3}>
-                  <Card style={{ width: '15rem' }}>
-                    <Card.Img variant="top" src={localStorage.getItem('foto')} />
-                  </Card>
-                </Col>
-                <Col lg={6}>
+  componentDidMount() {
+    this.setState({
+      user: localStorage.getItem('user'),
+      password: localStorage.getItem('password'),
+      foto: localStorage.getItem('foto'),
+      email: localStorage.getItem('email'),
+      info: localStorage.getItem('info'),
+      raza: localStorage.getItem('nombreRaza'),
+    });
+  }
 
-                <InputGroup className="mb-3">
-                    <InputGroup.Text>Correo </InputGroup.Text>
-                    <FormControl
-                      id="basic-url"
-                      aria-describedby="basic-addon3"
-                      placeholder={localStorage.getItem('email')}
-                    />
-                  </InputGroup>
-                  <InputGroup className="mb-3">
-                    <InputGroup.Text>Nombre</InputGroup.Text>
-                    <FormControl
-                      id="basic-url"
-                      aria-describedby="basic-addon3"
-                      placeholder={localStorage.getItem('user')}
-                    />
-                  </InputGroup>
-      
-                  
-                </Col>
-              </Row>
-              <Row className="justify-content-md-center">
-                <Col md={{ span: 3, offset: 3 }}>
-                  <Button variant="primary" onClick={this.cerrarSesion}>
-                    <a id="botonAlLogin" href='/'>Cerrar sesión</a>
-                  </Button>
-                </Col>
-              </Row>
-            </Container>
-          );
-    }else {
-        return (
-            <div id="iniciaSesion">
-                <h1>Debes iniciar sesión primero.</h1>
-                <Button variant="primary" onClick={this.cerrarSesion}>
-                    <a id="botonAlLogin" href='/'>Ir al login</a>
-                </Button>
+  render() {
+    if (localStorage.getItem('user') !== null) {
+      return (
+        <div className='InicioMainSite'>
+          <div className='PerfilData'>
+            <div id="blockName">
+              <h1>Perfil de {localStorage.getItem('user')}!</h1>
             </div>
-        );
+            <div className='ContentRMenss'>
+              <p>Email: {localStorage.getItem('email')}</p>
+              <p>Raza favorita:  {this.state.raza}</p>
+              <p>{localStorage.getItem('info')}</p>
+              <Button variant="primary" onClick={this.cerrarSesion}>
+                <a id="botonAlLogin" href='/'>Cerrar Sesion</a>
+              </Button>
+            </div>
+            <div className='FotoPerfil' style={{ backgroundImage: 'url(' + localStorage.getItem('foto') + ')' }}>
+
+            </div>
+          </div>
+          <iframe id='StiloFrame' src='https://my.spline.design/bandingcopy-59b335ada7bf8f22a4c0dee2f03358db/' style={{ borderWidth: '0px' }}></iframe>
+        </div>
+      );
+    } else {
+      return (
+        <div id="iniciaSesion">
+          <h1>Debes iniciar sesión primero.</h1>
+          <Button variant="primary" onClick={this.cerrarSesion}>
+            <a id="botonAlLogin" href='/'>Ir al login</a>
+          </Button>
+        </div>
+      );
     }
-    
+
   }
 }
 
