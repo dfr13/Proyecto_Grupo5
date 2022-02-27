@@ -19,7 +19,7 @@ class Login extends React.Component {
   }
 
   async componentDidMount() {
-    fetch('api/v1/resources/dogs?number=5')
+    fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat,horse,dog&amount=5')
       .then(response => response.json())
       .then(data => this.setState({
         tableData: data
@@ -65,7 +65,7 @@ class Login extends React.Component {
         <div className='InicioMainSite'>
           <div className='PrincipalContent'>
             <div id="blockName">
-              <h1>Hi {localStorage.getItem('user')}!</h1>
+              <h1>¡Hola {localStorage.getItem('user')}!</h1>
             </div>
             <div className='ContentRMenss'>
               <p>{localStorage.getItem('info')}</p>
@@ -79,10 +79,10 @@ class Login extends React.Component {
             {this.state.tableData.map((item) => {
               return (
                 <Card style={{ width: '18rem' }} className="Cartas">
-                  <Card.Title>Dog Facts</Card.Title>
+                  <Card.Title>{item.type} facts </Card.Title>
                   <Card.Body>
                     <Card.Text>
-                      {item.fact}
+                      {item.text}
                     </Card.Text>
                   </Card.Body>
                 </Card>

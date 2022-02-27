@@ -1,11 +1,5 @@
 import React from 'react';
 import {
-  InputGroup,
-  FormControl,
-  Container,
-  Card,
-  Col,
-  Row,
   Button,
 } from 'react-bootstrap';
 import './EstiloPerfil.css';
@@ -36,14 +30,14 @@ class Perfil extends React.Component {
         <div className='InicioMainSite'>
           <div className='PerfilData'>
             <div id="blockName">
-              <h1>Perfil de {localStorage.getItem('user')}!</h1>
+              <h1>Perfil de {localStorage.getItem('user')}</h1>
             </div>
             <div className='ContentRMenss'>
+              <p>{localStorage.getItem('info')}</p>
               <p>Email: {localStorage.getItem('email')}</p>
               <p>Raza favorita:  {this.state.raza}</p>
-              <p>{localStorage.getItem('info')}</p>
               <Button variant="primary" onClick={this.cerrarSesion}>
-                <a id="botonAlLogin" href='/'>Cerrar Sesion</a>
+                <a id="botonAlLogin" href='/grupo5-react/'>Cerrar Sesion</a>
               </Button>
             </div>
             <div className='FotoPerfil' style={{ backgroundImage: 'url(' + localStorage.getItem('foto') + ')' }}>
@@ -58,7 +52,7 @@ class Perfil extends React.Component {
         <div id="iniciaSesion">
           <h1>Debes iniciar sesión primero.</h1>
           <Button variant="primary" onClick={this.cerrarSesion}>
-            <a id="botonAlLogin" href='/'>Ir al login</a>
+            <a id="botonAlLogin" href='/grupo5-react/'>Ir al login</a>
           </Button>
         </div>
       );

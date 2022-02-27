@@ -7,7 +7,7 @@ import { MenuItems } from './data/MenuItems';
 export function App() {
   if (localStorage.getItem('user') !== null){
     return (
-      <Router>
+      <Router basename="/grupo5-react" >
         <HeaderPagina />
         {MenuItems.map((item) => {
           return (
@@ -25,7 +25,7 @@ export function App() {
 
   }else{
     return (
-      <Router>
+      <Router basename="/grupo5-react" >
         {MenuItems.map((item) => {
           return (
             <Route

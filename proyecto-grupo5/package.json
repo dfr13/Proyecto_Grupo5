@@ -1,9 +1,10 @@
 {
   "name": "proyecto-grupo5",
-  "proxy": "https://dog-facts-api.herokuapp.com/",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://dfr13.github.io/Proyecto_Grupo5/",
+
+  "private": false,
+  "homepage": "https://MaxPrain12.github.io/grupo5-react",
+
   "dependencies": {
     "@popperjs/core": "^2.11.2",
     "@testing-library/jest-dom": "^5.16.1",
@@ -12,16 +13,19 @@
     "bootstrap": "^5.1.3",
     "gh-pages": "^3.2.3",
     "react": "^17.0.2",
-    "react-bootstrap": "^2.1.2",
+    "react-bootstrap": "^2.1.0",
     "react-dom": "^17.0.2",
-    "react-router-dom": "5.3",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "^5.0.0",
     "react-uuid": "^1.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
+
+
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
