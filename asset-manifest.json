@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f4b5754.css",
-    "main.js": "/static/js/main.6bf271c2.js",
-    "static/js/787.fbd40f0b.chunk.js": "/static/js/787.fbd40f0b.chunk.js",
-    "static/media/4K_35.mp4": "/static/media/4K_35.2c947c6098476e84bbec.mp4",
-    "static/media/Alder.svg": "/static/media/Alder.f92cff6b16c42cc73d84a33ccb20033e.svg",
-    "static/media/Tolosa.svg": "/static/media/Tolosa.0e7a06b1f14eb5f7aa110b3af7e6d933.svg",
-    "static/media/Daniel.svg": "/static/media/Daniel.a94bb0d59d275d567a82048b910ac65e.svg",
-    "static/media/Angel.svg": "/static/media/Angel.7f6ad2fc80c707970cbdc3fd2331baab.svg",
-    "static/media/Jose.svg": "/static/media/Jose.49a348484a5c77a98504b6bb4bb4a858.svg",
-    "static/media/login.svg": "/static/media/login.855b842f483ae9b8f6545b37d48cb030.svg",
-    "index.html": "/index.html",
-    "main.8f4b5754.css.map": "/static/css/main.8f4b5754.css.map",
-    "main.6bf271c2.js.map": "/static/js/main.6bf271c2.js.map",
-    "787.fbd40f0b.chunk.js.map": "/static/js/787.fbd40f0b.chunk.js.map"
+    "main.css": "/Proyecto_Grupo5/static/css/main.8f4b5754.css",
+    "main.js": "/Proyecto_Grupo5/static/js/main.c1ed2950.js",
+    "static/js/787.fbd40f0b.chunk.js": "/Proyecto_Grupo5/static/js/787.fbd40f0b.chunk.js",
+    "static/media/4K_35.mp4": "/Proyecto_Grupo5/static/media/4K_35.2c947c6098476e84bbec.mp4",
+    "static/media/Alder.svg": "/Proyecto_Grupo5/static/media/Alder.f92cff6b16c42cc73d84a33ccb20033e.svg",
+    "static/media/Tolosa.svg": "/Proyecto_Grupo5/static/media/Tolosa.0e7a06b1f14eb5f7aa110b3af7e6d933.svg",
+    "static/media/Daniel.svg": "/Proyecto_Grupo5/static/media/Daniel.a94bb0d59d275d567a82048b910ac65e.svg",
+    "static/media/Angel.svg": "/Proyecto_Grupo5/static/media/Angel.7f6ad2fc80c707970cbdc3fd2331baab.svg",
+    "static/media/Jose.svg": "/Proyecto_Grupo5/static/media/Jose.49a348484a5c77a98504b6bb4bb4a858.svg",
+    "static/media/login.svg": "/Proyecto_Grupo5/static/media/login.855b842f483ae9b8f6545b37d48cb030.svg",
+    "index.html": "/Proyecto_Grupo5/index.html",
+    "main.8f4b5754.css.map": "/Proyecto_Grupo5/static/css/main.8f4b5754.css.map",
+    "main.c1ed2950.js.map": "/Proyecto_Grupo5/static/js/main.c1ed2950.js.map",
+    "787.fbd40f0b.chunk.js.map": "/Proyecto_Grupo5/static/js/787.fbd40f0b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8f4b5754.css",
-    "static/js/main.6bf271c2.js"
+    "static/js/main.c1ed2950.js"
   ]
 }
