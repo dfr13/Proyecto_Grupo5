@@ -3,7 +3,7 @@
   "proxy": "https://dog-facts-api.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dfr13.github.io/",
+  "homepage": "https://dfr13.github.io/Proyecto_Grupo5/",
   "dependencies": {
     "@popperjs/core": "^2.11.2",
     "@testing-library/jest-dom": "^5.16.1",
